@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Thực tập",
+    "deadline": "2025-08-11T02:48:50.291Z",
+    "priority": "medium",
+    "completed": true,
+    "tags": ["Học tập", "Công việc"],
+    "userId": { "$oid": "665caa4f9c1d9e1a0a000001" }
+  },
+  {
+    "title": "Học Angular",
+    "deadline": "2025-07-31T02:01:28.517Z",
+    "priority": "high",
+    "completed": false,
+    "tags": ["Học tập", "Công việc", "Giải trí"],
+    "userId": { "$oid": "665caa4f9c1d9e1a0a000001" }
+  },
+  {
+    "title": "Công việc 3",
+    "deadline": "2025-05-28T07:42:32.406Z",
+    "priority": "medium",
+    "completed": true,
+    "tags": ["Giải trí"],
+    "userId": { "$oid": "665caa4f9c1d9e1a0a000001" }
+  }
+]
