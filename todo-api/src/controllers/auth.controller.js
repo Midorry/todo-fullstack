@@ -56,7 +56,7 @@ export const loginUser = async (req, res) => {
     );
 
     const refreshToken = jwt.sign(
-      { userId: user._id },
+      { userId: user._id, role: user.role },
       process.env.REFRESH_SECRET,
       { expiresIn: "7d" }
     );
@@ -92,7 +92,7 @@ export const refreshToken = async (req, res) => {
     }
 
     const newAccessToken = jwt.sign(
-      { userId: decoded.userId },
+      { userId: decoded.userId, role: decoded.role },
       process.env.ACCESS_SECRET,
       { expiresIn: "15m" }
     );
