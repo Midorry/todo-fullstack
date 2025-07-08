@@ -1,0 +1,108 @@
+<nz-layout class="app-layout" *ngIf="showLayout; else loginLayout">
+  <nz-sider
+    class="menu-sidebar"
+    nzCollapsible
+    nzWidth="256px"
+    nzBreakpoint="md"
+    [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null"
+  >
+    <div class="sidebar-logo">
+      <a href="https://ng.ant.design/" target="_blank">
+        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" />
+        <h1>Todo app</h1>
+      </a>
+    </div>
+    <ul
+      nz-menu
+      nzTheme="dark"
+      nzMode="inline"
+      [nzInlineCollapsed]="isCollapsed"
+    >
+      <li nz-submenu nzOpen nzTitle="Cá nhân" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">Trang chủ</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/list-todo">Danh sách</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/calender">Lịch</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/stats-user">Thống kê cá nhân</a>
+          </li>
+        </ul>
+      </li>
+      <li
+        nz-submenu
+        nzOpen
+        nzTitle="Quản lý"
+        nzIcon="form"
+        *ngIf="userRole === 'admin'"
+      >
+        <ul>
+          <li nz-menu-item nzMatchRouter *ngIf="userRole === 'admin'">
+            <a routerLink="/list-user">Người dùng</a>
+          </li>
+          <li nz-menu-item nzMatchRouter *ngIf="userRole === 'admin'">
+            <a routerLink="/list-all-todo">Công việc</a>
+          </li>
+          <li nz-menu-item nzMatchRouter *ngIf="userRole === 'admin'">
+            <a routerLink="/stats-all">Thống kê toàn bộ</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <div>
+          <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <span
+              class="trigger"
+              nz-icon
+              [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></span>
+          </span>
+          <app-button-mode></app-button-mode>
+          <app-switch-language></app-switch-language>
+        </div>
+        <a nz-dropdown [nzDropdownMenu]="menu" nzPlacement="topCenter">
+          <nz-avatar nzIcon="user"></nz-avatar>
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu nzSelectable>
+            <li nz-menu-item>Trang cá nhân</li>
+            <li nz-menu-item nzDanger (click)="logout()">
+              <span nz-icon nzType="logout"></span>
+              Đăng xuất
+            </li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
+<ng-template #loginLayout>
+  <!-- Layout đơn giản chỉ có login -->
+  <div
+    style="
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: aliceblue;
+    "
+  >
+    <router-outlet></router-outlet>
+  </div>
+</ng-template>
