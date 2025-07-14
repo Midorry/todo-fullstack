@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "6861fb6c6dd63f6a80b61252"
+  },
+  "email": "admin@gmail.com",
+  "password": "$2b$10$FuOeK2IZLzXXLV4U.ddtIeQb2.MJ159P0CWRj.3R.f2r18K8AEVTK",
+  "createdAt": {
+    "$date": "2025-06-30T02:50:20.977Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-30T04:25:30.241Z"
+  },
+  "__v": 0,
+  "userName": "admin",
+  "role": "admin"
+},
+{
+  "_id": {
+    "$oid": "6862118a5be7a5207f53d849"
+  },
+  "email": "admin1@gmail.com",
+  "password": "$2b$10$Jbs3uzNUgrP1ThUFyIXNK.dhC0Aptoj8ED8iqDLCgYrwAFeGTqF1e",
+  "createdAt": {
+    "$date": "2025-06-30T04:24:42.270Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-30T07:05:17.635Z"
+  },
+  "__v": 0,
+  "userName": "admin1",
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "6865f6fbfebcfe7851906461"
+  },
+  "userName": "TranTam",
+  "role": "user",
+  "email": "tam@gmail.com",
+  "password": "$2b$10$J85QFp4XT.vOpn9Dkv.TRO3S/t9lb1pVNHL8N8gZxlwh9i2o6y4Eu",
+  "createdAt": {
+    "$date": "2025-07-03T03:20:27.031Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-03T03:20:27.031Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b4935d7becd0eaa1f267a"
+  },
+  "userName": "admin12",
+  "role": "user",
+  "email": "admin12345@gmail.com",
+  "password": "",
+  "createdAt": {
+    "$date": "2025-07-07T04:12:37.512Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T04:17:30.599Z"
+  },
+  "__v": 0
+}]

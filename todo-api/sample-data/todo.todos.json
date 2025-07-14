@@ -1,0 +1,164 @@
+[{
+  "_id": {
+    "$oid": "6861f42d7f1450a26b4c2e12"
+  },
+  "title": "Thực tập",
+  "deadline": "2025-08-11T02:48:50.291Z",
+  "priority": "medium",
+  "completed": true,
+  "tags": [
+    "Học tập",
+    "Công việc"
+  ],
+  "userId": {
+    "$oid": "665caa4f9c1d9e1a0a000001"
+  }
+},
+{
+  "_id": {
+    "$oid": "6861f42d7f1450a26b4c2e13"
+  },
+  "title": "Học Angular",
+  "deadline": "2025-07-31T02:01:28.517Z",
+  "priority": "high",
+  "completed": false,
+  "tags": [
+    "Học tập",
+    "Công việc",
+    "Giải trí"
+  ],
+  "userId": {
+    "$oid": "665caa4f9c1d9e1a0a000001"
+  }
+},
+{
+  "_id": {
+    "$oid": "6861f42d7f1450a26b4c2e14"
+  },
+  "title": "Công việc 3",
+  "deadline": "2025-05-28T07:42:32.406Z",
+  "priority": "medium",
+  "completed": true,
+  "tags": [
+    "Giải trí"
+  ],
+  "userId": {
+    "$oid": "665caa4f9c1d9e1a0a000001"
+  }
+},
+{
+  "_id": {
+    "$oid": "686210d85be7a5207f53d843"
+  },
+  "title": "Công việc 1",
+  "completed": true,
+  "priority": "medium",
+  "deadline": "2025-07-05T04:21:36.891Z",
+  "tags": [
+    "Công việc",
+    "Gia đình"
+  ],
+  "userId": {
+    "$oid": "6861fb6c6dd63f6a80b61252"
+  },
+  "createdAt": {
+    "$date": "2025-06-30T04:21:44.375Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-14T02:34:27.072Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686211ba5be7a5207f53d84e"
+  },
+  "title": "Công việc 2",
+  "completed": false,
+  "priority": "high",
+  "deadline": "2025-07-06T04:25:24.714Z",
+  "tags": [
+    "Gia đình",
+    "Học tập"
+  ],
+  "userId": {
+    "$oid": "6861fb6c6dd63f6a80b61252"
+  },
+  "createdAt": {
+    "$date": "2025-06-30T04:25:30.229Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-30T04:25:30.229Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6862372d072e5e66aeee40be"
+  },
+  "title": "Công việc 3",
+  "completed": false,
+  "priority": "low",
+  "deadline": "2025-07-12T07:05:08.516Z",
+  "tags": [
+    "Công việc",
+    "Giải trí",
+    "Gia đình",
+    "Học tập"
+  ],
+  "userId": {
+    "$oid": "6862118a5be7a5207f53d849"
+  },
+  "createdAt": {
+    "$date": "2025-06-30T07:05:17.501Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-30T07:05:17.501Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6865f8cde30a147dba3a9806"
+  },
+  "title": "Công việc 7",
+  "completed": false,
+  "priority": "medium",
+  "deadline": "2025-07-10T03:28:07.290Z",
+  "tags": [
+    "Công việc",
+    "Giải trí"
+  ],
+  "userId": {
+    "$oid": "6865f6fbfebcfe7851906461"
+  },
+  "createdAt": {
+    "$date": "2025-07-03T03:28:13.222Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-03T03:28:13.222Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6865f98fe30a147dba3a9809"
+  },
+  "title": "Công việc 8",
+  "completed": false,
+  "priority": "high",
+  "deadline": "2025-07-23T03:31:23.689Z",
+  "tags": [
+    "Gia đình"
+  ],
+  "userId": {
+    "$oid": "6865f6fbfebcfe7851906461"
+  },
+  "createdAt": {
+    "$date": "2025-07-03T03:31:27.956Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-03T03:31:27.956Z"
+  },
+  "__v": 0
+}]
