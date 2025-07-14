@@ -17,8 +17,20 @@ export class WelcomeComponent implements OnInit {
   completedTodos: number = 0;
   overdueTodos: number = 0;
   upcomingTodos: number = 0;
+  progressPercent: number = 0;
 
   topImportantTodos: Todo[] = [];
+
+  randomQuote: string = '';
+
+  // Danh sách câu quote để random
+  quotes: string[] = [
+    'Mỗi ngày là một cơ hội mới!',
+    'Hoàn thành từng việc nhỏ để tạo nên thành công lớn!',
+    'Hãy làm hết sức, kết quả sẽ đến!',
+    'Đừng trì hoãn, hãy bắt đầu ngay hôm nay!',
+    'Cố gắng thêm một chút mỗi ngày!',
+  ];
 
   constructor(
     private todoService: ToDoService,
@@ -32,15 +44,18 @@ export class WelcomeComponent implements OnInit {
       this.userEmail = JSON.parse(userEmailString).userName;
     }
 
-    // Gọi loadTodos từ service để đảm bảo có data
+    // Random một câu quote mỗi lần load trang
+    this.randomQuote = this.getRandomQuote();
+
+    // Gọi loadTodos từ service
     this.todoService.loadTodos();
 
-    // Subscribe để hiển thị thống kê, update liên tục khi data thay đổi
+    // Subscribe để cập nhật thống kê liên tục
     this.todoService.todos$.subscribe((todos) => {
       this.updateStats(todos);
     });
 
-    // Khi login, chỉ muốn thông báo 1 lần → filter + take(1)
+    // Thông báo khi login (chỉ 1 lần)
     const hasShown = localStorage.getItem('hasShownWelcomeNotification');
     if (hasShown !== 'true') {
       this.todoService.todos$
@@ -55,12 +70,39 @@ export class WelcomeComponent implements OnInit {
     }
   }
 
+  /**
+   * Lấy random một câu quote
+   */
+  getRandomQuote(): string {
+    const index = Math.floor(Math.random() * this.quotes.length);
+    return this.quotes[index];
+  }
+
+  /**
+   * Hiển thị modal thêm mới công việc
+   */
   onAdd(): void {
     this.showAdd = true;
   }
 
   onCancelAdd() {
     this.showAdd = false;
+  }
+
+  /**
+   * Chuyển sang trang lịch (có thể điều hướng)
+   */
+  viewCalendar(): void {
+    console.log('Đi tới trang lịch');
+    // Ví dụ: this.router.navigate(['/calendar']);
+  }
+
+  /**
+   * Chuyển sang trang thống kê
+   */
+  viewStats(): void {
+    console.log('Đi tới trang thống kê');
+    // Ví dụ: this.router.navigate(['/stats']);
   }
 
   /**
@@ -82,6 +124,15 @@ export class WelcomeComponent implements OnInit {
       const deadlineDate = new Date(todo.deadline);
       return deadlineDate > now && deadlineDate <= sevenDaysLater;
     }).length;
+
+    // Tính progress
+    if (this.totalTodos > 0) {
+      this.progressPercent = Math.round(
+        (this.completedTodos / this.totalTodos) * 100
+      );
+    } else {
+      this.progressPercent = 0;
+    }
 
     // Top 3 công việc priority cao nhất
     this.topImportantTodos = todos
@@ -122,19 +173,5 @@ export class WelcomeComponent implements OnInit {
         'warning'
       );
     }
-    // if (todos.length > 0) {
-    //   this.notification.show(
-    //     `Bạn có ${todos.length - countOverdue} công việc cần làm`,
-    //     'info'
-    //   );
-    // }
-  }
-
-  /**
-   * Thêm mới công việc (có thể mở modal hoặc navigate)
-   */
-  onAddTodo() {
-    console.log('Thêm mới công việc');
-    // ví dụ: this.router.navigate(['/add']);
   }
 }

@@ -7,3 +7,63 @@
 .important {
   color: var(--text-color);
 }
+
+/* Phần wrapper chung cho trang welcome */
+.wrapper {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card thống kê công việc */
+.nz-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Grid chứa statistic */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Statistic custom thêm: căn giữa */
+nz-statistic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tiêu đề statistic đậm hơn */
+::ng-deep .ant-statistic-title {
+  font-weight: 500;
+  color: #444;
+}
+
+/* Giá trị statistic to và nổi bật */
+::ng-deep .ant-statistic-content-value {
+  font-size: 20px;
+  font-weight: 600;
+  // color: #1890ff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Quá hạn: giữ màu đỏ từ valueStyle trong component */
+
+/* Progress dưới cùng */
+nz-progress {
+  margin-top: 8px;
+}
