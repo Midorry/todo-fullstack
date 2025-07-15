@@ -9,7 +9,7 @@ import { ToDoService } from './todo.service';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   // private apiUrl = 'http://localhost:3000/api';
-  private apiUrl = 'https://todo-fullstack.railway.app/';
+  private apiUrl = 'https://todo-fullstack.railway.app';
   private usersSubject = new BehaviorSubject<User[]>([]);
   users$ = this.usersSubject.asObservable();
 
