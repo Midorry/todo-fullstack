@@ -10,7 +10,6 @@ import todoRoutes from "./routes/todo.routes.js";
 dotenv.config();
 
 const app = express();
-const cors = require("cors");
 
 const allowedOrigins = [
   "http://localhost:4200", // local dev
