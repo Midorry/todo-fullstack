@@ -4,15 +4,18 @@
 > nhập bằng JWT + refresh token, xem lịch, thống kê, quản lý người dùng và nhiều
 > tính năng nâng cao.**
 
-<!-- ## 🚀 Demo
+## 🚀 Demo
 
-- 🌐 [Link FE (Angular)](https://your-frontend-link.vercel.app)
-- 🌐 [Link BE (Node.js + Express)](https://your-backend-link.onrender.com)
+- 🌐 [Link FE (Angular)](https://midorry.github.io/todo-fullstack)
+- 🌐
+  [Link BE (Node.js + Express)](https://todo-fullstack-production-d65c.up.railway.app/)
 
 > 🧪 Tài khoản demo:
->   IboDfRrALGZabmMV
-> - Admin: `admin@example.com` | password: `123456`
-> - User: `user@example.com` | password: `123456` -->
+
+<!-- >   IboDfRrALGZabmMV -->
+
+> - Admin: `admin@gmail.com` | password: `admin123`
+> - User: `user@gmail.com` | password: `user123`
 
 ---
 
@@ -26,7 +29,7 @@
 ✅ Quản lý người dùng (Admin)  
 ✅ Xóa nhiều công việc cùng lúc  
 ✅ Thông báo deadline  
-✅ Responsive design (hoạt động tốt trên mobile)
+✅ Night mode, đa ngôn ngữ
 
 ---
 
