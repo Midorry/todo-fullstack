@@ -7,7 +7,7 @@ import { User } from '../model/user.model';
 export class UserService {
   // private apiUrl = 'http://localhost:3000/api/users';
   private apiUrl =
-    'https://todo-fullstack-production-d65c.up.railway.app//users';
+    'https://todo-fullstack-production-d65c.up.railway.app/api/users';
 
   private usersSubject = new BehaviorSubject<User[]>([]);
   users$ = this.usersSubject.asObservable();
