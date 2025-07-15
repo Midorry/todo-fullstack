@@ -5,6 +5,8 @@
 }
 .input-name {
   width: 100%;
+  border-radius: 8px;
+  height: 40px;
 }
 .input-name.ng-invalid.ng-touched {
   border: 1px solid #ff4d4f !important;
