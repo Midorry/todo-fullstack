@@ -6,7 +6,8 @@ import { Todo } from '../model/todo.model';
 @Injectable({ providedIn: 'root' })
 export class ToDoService {
   // private apiUrl = 'http://localhost:3000/api/todos';
-  private apiUrl = 'https://todo-fullstack.railway.app/todos';
+  private apiUrl =
+    'https://todo-fullstack-production-d65c.up.railway.app//todos';
 
   private todosSubject = new BehaviorSubject<Todo[]>([]);
   private adminTodosSubject = new BehaviorSubject<Todo[]>([]);
