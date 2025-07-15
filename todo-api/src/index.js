@@ -13,7 +13,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:4200", // local dev
-  "https://your-netlify-domain.netlify.app", // Netlify domain
+  "https://todo-fullstack.netlify.app", // Netlify domain
 ];
 
 app.use(
