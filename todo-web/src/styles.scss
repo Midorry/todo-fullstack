@@ -1,18 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/angular-calendar/css/angular-calendar.css";
-@import "./app/app.component.scss";
-@import "./app/pages/button-mode/button-mode.component.sass";
-@import "./app/pages/login/login.component.scss";
-@import "./app/pages/register/register.component.scss";
-@import "./app/pages/stats/stats.component.scss";
-@import "./app/pages/switch-language/switch-language.component.scss";
-@import "./app/pages/welcome/welcome.component.scss";
-@import "./app/pages/todos/add/add.component.scss";
-@import "./app/pages/todos/edit/edit.component.scss";
-@import "./app/pages/todos/list/list.component.scss";
-@import "./app/pages/users/add/add.component.scss";
-@import "./app/pages/users/edit/edit.component.scss";
-@import "./app/pages/users/list/list.component.scss";
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.min.css";
 
 // styles.scss
 
