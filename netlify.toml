@@ -1,0 +1,9 @@
+[build]
+  base = "todo-web"
+  publish = "dist/todo-web"
+  command = "ng build --configuration=production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
